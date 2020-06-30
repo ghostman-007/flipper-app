@@ -3,31 +3,18 @@ import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
 import 'package:fluttertoast/fluttertoast.dart';
 
+// TODO: Select portrait option in Xcode for ios
 void main() {
   runApp(MyApp());
 }
 
-class MyApp extends StatefulWidget {
-  @override
-  _MyAppState createState() => _MyAppState();
-}
-
-class _MyAppState extends State<MyApp> {
+class MyApp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
       title: 'Flipper',
       home: MyHomePage(title: 'Flipper'),
     );
-  }
-
-  @override
-  void initState() {
-    super.initState();
-    SystemChrome.setPreferredOrientations([
-      DeviceOrientation.portraitDown,
-      DeviceOrientation.portraitUp,
-    ]);
   }
 }
 
@@ -83,13 +70,13 @@ class _MyHomePageState extends State<MyHomePage> {
       case 'f':
         return '\u025f';
       case 'g':
-        return '\u0183';
+        return '\u1d77';
       case 'h':
         return '\u0265';
       case 'i':
-        return '\u1D09';
+        return '\u1d09';
       case 'j':
-        return '\u027e';
+        return '\u017f';
       case 'k':
         return '\u029e';
       case 'm':
@@ -102,6 +89,8 @@ class _MyHomePageState extends State<MyHomePage> {
         return 'b';
       case 'r':
         return '\u0279';
+      case 's':
+        return '\u0073';
       case 't':
         return '\u0287';
       case 'u':
@@ -110,8 +99,6 @@ class _MyHomePageState extends State<MyHomePage> {
         return '\u028c';
       case 'w':
         return '\u028d';
-      case 'x':
-        return 'x';
       case 'y':
         return '\u028e';
 
@@ -124,23 +111,31 @@ class _MyHomePageState extends State<MyHomePage> {
       case 'F':
         return '\u2132';
       case 'G':
-        return '\u05e4';
+        return '\u2141';
       case 'J':
         return '\u017f';
+      case 'K':
+        return '\ua7b0';
       case 'L':
-        return '\u02e5';
+        return '\ua780';
       case 'M':
-        return 'W';
+        return '\u019c';
       case 'P':
         return '\u0500';
+      case 'Q':
+        return '\u00d2';
+      case 'R':
+        return '\u1d1a';
+      case 'S':
+        return '\u0053';
       case 'T':
-        return '\u2534';
+        return '\ua7b1';
       case 'U':
         return '\u2229';
       case 'V':
         return '\u039b';
       case 'W':
-        return 'M';
+        return '\u028d';
       case 'Y':
         return '\u2144';
 
@@ -152,13 +147,13 @@ class _MyHomePageState extends State<MyHomePage> {
         return 'e';
       case '\u025f':
         return 'f';
-      case '\u0183':
+      case '\u1d77':
         return 'g';
       case '\u0265':
         return 'h';
-      case '\u0131':
+      case '\u1d09':
         return 'i';
-      case '\u027e':
+      case '\u017f':
         return 'j';
       case '\u029e':
         return 'k';
@@ -174,6 +169,43 @@ class _MyHomePageState extends State<MyHomePage> {
         return 'w';
       case '\u028e':
         return 'y';
+
+      case '\u2200':
+        return 'A';
+      case '\u0186':
+        return 'C';
+      case '\u018e':
+        return 'E';
+      case '\u2132':
+        return 'F';
+      case '\u2141':
+        return 'G';
+      case '\u017f':
+        return 'J';
+      case '\ua7b0':
+        return 'K';
+      case '\ua780':
+        return 'L';
+      case '\u019c':
+        return 'M';
+      case '\u0500':
+        return 'P';
+      case '\u00d2':
+        return 'Q';
+      case '\u1d1a':
+        return 'R';
+      case '\u0053':
+        return 'S';
+      case '\ua7b1':
+        return 'T';
+      case '\u2229':
+        return 'U';
+      case '\u039b':
+        return 'V';
+      case '\u028d':
+        return 'W';
+      case '\u2144':
+        return 'Y';
 
       case '1':
         return '\u0196';
@@ -191,6 +223,19 @@ class _MyHomePageState extends State<MyHomePage> {
         return '\u3125';
       case '9':
         return '6';
+
+      case '\u0196':
+        return '1';
+      case '\u1105':
+        return '2';
+      case '\u0190':
+        return '3';
+      case '\u3123':
+        return '4';
+      case '\u03DB':
+        return '5';
+      case '\u3125':
+        return '7';
 
       case '!':
         return '\u00A1';
